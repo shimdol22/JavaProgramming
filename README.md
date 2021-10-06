@@ -1,3 +1,4 @@
 # JavaProgramming
 DGU Class JAVA Programming 
-Practice code & Homework 
+Practices & Homeworks
+Covering applied java language such as Eratosthenes' sieve, Bit coding, Event, Swing componet etc.
