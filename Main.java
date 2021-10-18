@@ -1,40 +1,26 @@
-package Chap6;
+package Chap12;
+
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//시나리오 [1.Simulation 2.menu 3.1+2]
-		System.out.println("[OOAD");
-		
-		Car k7 = new Car();
-		System.out.println("최고속도: "+k7.getHighestSpeed());
-		
-		int n = k7.Navi.find_shortest_path();
-		k7.Navi.monitor();
-		
-		System.out.println("\n---------------------speedgun monitor---------------------");
-		
-		for(int i=0; i<n; i++) {
-			Road road = new Road();
-			Speedgun police = new Speedgun();
-			
-			System.out.println("Road"+i+"\t");
-			police.shot(k7);
-			police.monitor(road);
+		System.out.println("파일입출력");
+		FileReader fin = null;
+		try {
+			fin = new FileReader("c:\\windows\\system.ini"); 
+			int c;
+			while ((c = fin.read()) != -1) { 		
+				System.out.print((char)c);
+			}
+			fin.close();
 		}
-		
-		/*Navi Test
-		Navigator iNavi = new Navigator();
-		iNavi.find_shortest_path();
-		iNavi.monitor(); */
-		
-		/*
-		Car k7 = new Car();
-		System.out.println("최고속도: "+k7.getHighestSpeed());
-		System.out.println("현재속도: "+k7.current_speed());
-		k7.Navi.find_shortest_path();
-		k7.Navi.monitor(); */
+		catch (IOException e) {
+			System.out.println("입출력 오류");
+
 	}
 
+}
 }
